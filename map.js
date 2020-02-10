@@ -1,18 +1,3 @@
-/**
- * The Map object is a simple key/value map.
- * Any value (both objects and primitive values) may be used as either a key or a value.
- *
- * A map can be thought of as an object for which the keys can be arbitrary objects.
- * In ES5, the method toString is implicitly called on property keys before a property access,
- * which is less than helpful for object keys given that ({}.toString()) is [object Object].
- *
- * Syntax: new Map([iterable])
- * Iterable is an Array or other iterable object whose elements are key-value pairs (2-element Arrays).
- * Each key-value pair will be added to the new Map. null is treated as undefined.
- *
- * Detailed: http://www.2ality.com/2015/01/es6-maps-sets.html
- */
-
 const gods = [
     {name: 'Douglas Crockford'},
     {name: 'Christopher Nolan'},

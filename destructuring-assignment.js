@@ -1,16 +1,10 @@
-/**
- * Destructuring Assignment
- *
- * Destructuring allows binding using pattern matching, with support for matching arrays and objects.
- * Destructuring is fail-soft, similar to standard object lookup foo["bar"], producing undefined values when not found.
- */
 
 // Destructuring Assignment ES6
 var [x, y, z] = [1, 2, 3];
 // is equivalent to..
 var x = 1, y = 2, z = 3;
 // it even works with nested arrays
-let [x, [y]] = [1, [2]];
+var [x, [y]] = [1, [2]];
 console.log(x, y); // 2, 1
 
 // Array Matching
@@ -28,33 +22,12 @@ var [ a, , b ] = list;
 [b, a] = [a, b];    // Swapping values of variables.
 
 // Object Patterns
-let {a:x, b:y} = {a: 1, b: 2};
+var {a:x, b:y} = {a: 1, b: 2};
 console.log(x, y); // 1, 2
 
 // works with nested objects too
-let {a: x, b: {c, y}} = {a: 1, b: {c: 2}};
+var {a: x, b: {c, y}} = {a: 1, b: {c: 2}};
 console.log(x, y);// 1, 2
-
-
-// Object Matching, Shorthand Notation
-// ES5
-var tmp = getASTNode();
-var op = tmp.op;
-var lhs = tmp.lhs;
-var rhs = tmp.rhs;
-
-// ES6
-var { op, lhs, rhs } = getASTNode();
-
-// Object Matching, Deep Matching
-// ES5
-var tmp = getASTNode();
-var a = tmp.op;
-var b = tmp.lhs.op;
-var c = tmp.rhs;
-
-// ES6
-var { op: a, lhs: { op: b }, rhs: c } = getASTNode();
 
 // Fail-Soft Destructuring
 // ES5

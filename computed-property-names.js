@@ -4,17 +4,19 @@
 
 // ES5
 var obj = {
-    foo: "bar"
+  foo: "bar"
 };
 obj["prop_" + foo()] = 42;
+console.log(obj);
 
 // ES6
 var obj = {
-    foo: "bar",
-    [ "prop_" + foo() ]: 42
+  foo: "bar",
+  ["prop_" + foo()]: 42
 };
+console.log(obj);
 
 // Dummy fn
 function foo() {
-    return 'name';
+  return "name";
 }
